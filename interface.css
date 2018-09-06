@@ -1,0 +1,24 @@
+body {
+  font-size: 100%;
+  margin-top: 50px;
+  margin-left: 100px;
+  background-color: lightblue;
+  display: table;
+  transform:scale(1.2)
+}
+
+h1 {
+  text-align: center;
+  font-size: 110%;
+  width: 323px;
+  margin-bottom: -40px;
+}
+
+table.heros {
+  table-layout: fixed;
+  width: 100%:
+}
+
+button.options {
+  margin-right: 20px;
+}
