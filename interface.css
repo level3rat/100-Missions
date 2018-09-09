@@ -1,6 +1,6 @@
 body {
   font-size: 110%;
-  //margin-top: 50px;
+  margin-top: 50px;
   margin-left: 50px;
   background-color: lightblue;
   display: table;
@@ -23,38 +23,44 @@ table.heros {
 
 img#add {
   position: absolute;
-  left: 385px;
-  top: 275px;
+  left: 400px;
+  top: 335px;
   //margin-top: 100px;
   //margin-left: 400px;
-  width: 61px;
+  width: 78px;
+  height: auto;
 }
 
 img#sub {
   position: absolute;
-  left: 385px;
-  top: 345px;
+  left: 400px;
+  top: 420px;
   //margin-top: 100px;
   //margin-left: 400px;
-  width: 61px;
+  width: 78px;
+  height: auto;
 }
 
 img#hero {
-  height: 102px;
+  height: 120px;
   padding-left: 5px;
   width: auto;
 }
 
 img#multi1 {
   position: absolute;
-  left: 385px;
-  top: 413px;
+  left: 400px;
+  top: 506px;
+  width: 35px;
+  height: auto;
 }
 
 img#multi10 {
   position: absolute;
-  left: 418px;
-  top: 413px;
+  left: 443px;
+  top: 506px;
+  width: 35px;
+  height: auto;
 }
 
 div.count {
