@@ -17,167 +17,176 @@ var zealot = 0;
 var bw = 0;
 var pyro = 0;
 var uc = 0;
+var sum = 0;
+var operation = "add";
+var multi = 1;
 
+function changeMulti(multiplier) {
+  multi = multiplier;
+}
 
-
-function mercSub(number){
-    merc = merc - 1;
-    document.getElementById("merc").innerHTML = merc;
+function ops(name) {
+  if (name == 'merc') {
+    if (operation == "add") {
+      merc = merc + multi;
+      document.getElementById("merc").innerHTML = merc;
+    };
+    if (operation == "sub") {
+      merc = merc - multi;
+      document.getElementById("merc").innerHTML = merc;
+    };
+  };
+  if (name == 'hunt') {
+    if (operation == "add") {
+      hunt = hunt + multi;
+      document.getElementById("hunt").innerHTML = hunt;
+    };
+    if (operation == "sub") {
+      hunt = hunt - multi;
+      document.getElementById("hunt").innerHTML = hunt;
+    };
+  };
+  if (name == 'fk') {
+    if (operation == "add") {
+      fk = fk + multi;
+      document.getElementById("fk").innerHTML = fk;
+    };
+    if (operation == "sub") {
+      fk = fk - multi;
+      document.getElementById("fk").innerHTML = fk;
+    };
+  };
+  if (name == 'rv') {
+    if (operation == "add") {
+      rv = rv + multi;
+      document.getElementById("rv").innerHTML = rv;
+    };
+    if (operation == "sub") {
+      rv = rv - multi;
+      document.getElementById("rv").innerHTML = rv;
+    };
+  };
+  if (name == 'ib') {
+    if (operation == "add") {
+      ib = ib + multi;
+      document.getElementById("ib").innerHTML = ib;
+    };
+    if (operation == "sub") {
+      ib = ib - multi;
+      document.getElementById("ib").innerHTML = ib;
+    };
+  };
+  if (name == 'slayer') {
+    if (operation == "add") {
+      slayer = slayer + multi;
+      document.getElementById("slayer").innerHTML = slayer;
+    };
+    if (operation == "sub") {
+      slayer = slayer - multi;
+      document.getElementById("slayer").innerHTML = slayer;
+    };
+  };
+  if (name == 'ws') {
+    if (operation == "add") {
+      ws = ws + multi;
+      document.getElementById("ws").innerHTML = ws;
+    };
+    if (operation == "sub") {
+      ws = ws - multi;
+      document.getElementById("ws").innerHTML = ws;
+    };
+  };
+  if (name == 'hm') {
+    if (operation == "add") {
+      hm = hm + multi;
+      document.getElementById("hm").innerHTML = hm;
+    };
+    if (operation == "sub") {
+      hm = hm - multi;
+      document.getElementById("hm").innerHTML = hm;
+    };
+  };
+  if (name == 'shade') {
+    if (operation == "add") {
+      shade = shade + multi;
+      document.getElementById("shade").innerHTML = shade;
+    };
+    if (operation == "sub") {
+      shade = shade - multi;
+      document.getElementById("shade").innerHTML = shade;
+    };
+  };
+  if (name == 'whc') {
+    if (operation == "add") {
+      whc = whc + multi;
+      document.getElementById("whc").innerHTML = whc;
+    };
+    if (operation == "sub") {
+      whc = whc - multi;
+      document.getElementById("whc").innerHTML = whc;
+    };
+  };
+  if (name == 'bh') {
+    if (operation == "add") {
+      bh = bh + multi;
+      document.getElementById("bh").innerHTML = bh;
+    };
+    if (operation == "sub") {
+      bh = bh - multi;
+      document.getElementById("bh").innerHTML = bh;
+    };
+  };
+  if (name == 'zealot') {
+    if (operation == "add") {
+      zealot = zealot + multi;
+      document.getElementById("zealot").innerHTML = zealot;
+    };
+    if (operation == "sub") {
+      zealot = zealot - multi;
+      document.getElementById("zealot").innerHTML = zealot;
+    };
+  };
+  if (name == 'bw') {
+    if (operation == "add") {
+      bw = bw + multi;
+      document.getElementById("bw").innerHTML = bw;
+    };
+    if (operation == "sub") {
+      bw = bw - multi;
+      document.getElementById("bw").innerHTML = bw;
+    };
+  };
+  if (name == 'pyro') {
+    if (operation == "add") {
+      pyro = pyro + multi;
+      document.getElementById("pyro").innerHTML = pyro;
+    };
+    if (operation == "sub") {
+      pyro = pyro - multi;
+      document.getElementById("pyro").innerHTML = pyro;
+    };
+  };
+  if (name == 'uc') {
+      if (operation == "add") {
+        uc = uc + multi;
+        document.getElementById("uc").innerHTML = uc;
+      };
+      if (operation == "sub") {
+        uc = uc - multi;
+        document.getElementById("uc").innerHTML = uc;
+      };
+  }
 };
 
-function mercAdd(number){
-    merc = merc + 1;
-    document.getElementById("merc").innerHTML = merc;
-};
+function changeOps(operator) {
+  if (operator == 'add') {
+    operation = 'add';
+  }
+  if (operator == 'sub') {
+    operation = 'sub';
+  }
+}
 
-function huntSub(number){
-    hunt = hunt - 1;
-    document.getElementById("hunt").innerHTML = hunt;
-};
-
-function huntAdd(number){
-    hunt = hunt + 1;
-    document.getElementById("hunt").innerHTML = hunt;
-};
-
-function fkSub(number){
-    fk = fk - 1;
-    document.getElementById("fk").innerHTML = fk;
-};
-
-function fkAdd(number){
-    fk = fk + 1;
-    document.getElementById("fk").innerHTML = fk;
-};
-
-
-
-
-function rvSub(number){
-    rv = rv - 1;
-    document.getElementById("rv").innerHTML = rv;
-};
-
-function rvAdd(number){
-    rv = rv + 1;
-    document.getElementById("rv").innerHTML = rv;
-};
-
-function ibSub(number){
-    ib = ib - 1;
-    document.getElementById("ib").innerHTML = ib;
-};
-
-function ibAdd(number){
-    ib = ib + 1;
-    document.getElementById("ib").innerHTML = ib;
-};
-
-function slayerSub(number){
-    slayer = slayer - 1;
-    document.getElementById("slayer").innerHTML = slayer;
-};
-
-function slayerAdd(number){
-    slayer = slayer + 1;
-    document.getElementById("slayer").innerHTML = slayer;
-};
-
-
-
-function wsSub(number){
-    ws = ws - 1;
-    document.getElementById("ws").innerHTML = ws;
-};
-
-function wsAdd(number){
-    ws = ws + 1;
-    document.getElementById("ws").innerHTML = ws;
-};
-
-function hmSub(number){
-    hm = hm - 1;
-    document.getElementById("hm").innerHTML = hm;
-};
-
-function hmAdd(number){
-    hm = hm + 1;
-    document.getElementById("hm").innerHTML = hm;
-};
-
-function shadeSub(number){
-    shade = shade - 1;
-    document.getElementById("shade").innerHTML = shade;
-};
-
-function shadeAdd(number){
-    shade = shade + 1;
-    document.getElementById("shade").innerHTML = shade;
-};
-
-
-
-function whcSub(number){
-    whc = whc - 1;
-    document.getElementById("whc").innerHTML = whc;
-};
-
-function whcAdd(number){
-    whc = whc + 1;
-    document.getElementById("whc").innerHTML = whc;
-};
-
-function bhSub(number){
-    bh = bh - 1;
-    document.getElementById("bh").innerHTML = bh;
-};
-
-function bhAdd(number){
-    bh = bh + 1;
-    document.getElementById("bh").innerHTML = bh;
-};
-
-function zealotSub(number){
-    zealot = zealot - 1;
-    document.getElementById("zealot").innerHTML = zealot;
-};
-
-function zealotAdd(number){
-    zealot = zealot + 1;
-    document.getElementById("zealot").innerHTML = zealot;
-};
-
-
-
-function bwSub(number){
-    bw = bw - 1;
-    document.getElementById("bw").innerHTML = bw;
-};
-
-function bwAdd(number){
-    bw = bw + 1;
-    document.getElementById("bw").innerHTML = bw;
-};
-
-function pyroSub(number){
-    pyro = pyro - 1;
-    document.getElementById("pyro").innerHTML = pyro;
-};
-
-function pyroAdd(number){
-    pyro = pyro + 1;
-    document.getElementById("pyro").innerHTML = pyro;
-};
-
-function ucSub(number){
-    uc = uc - 1;
-    document.getElementById("uc").innerHTML = uc;
-};
-
-function ucAdd(number){
-    uc = uc + 1;
-    document.getElementById("uc").innerHTML = uc;
-};
 
 
 function save(){
@@ -196,12 +205,30 @@ function save(){
     zealot: zealot,
     bw: bw,
     pyro: pyro,
-    uc: uc
+    uc: uc,
   }
   localStorage.setItem("save",JSON.stringify(save));
 }
 
-function load(){
+function refresh(){
+  document.getElementById("merc").innerHTML = merc;
+  document.getElementById("hunt").innerHTML = hunt;
+  document.getElementById("fk").innerHTML = fk;
+  document.getElementById("rv").innerHTML = rv;
+  document.getElementById("ib").innerHTML = ib;
+  document.getElementById("slayer").innerHTML = slayer;
+  document.getElementById("ws").innerHTML = ws;
+  document.getElementById("hm").innerHTML = hm;
+  document.getElementById("shade").innerHTML = shade;
+  document.getElementById("whc").innerHTML = whc;
+  document.getElementById("bh").innerHTML = bh;
+  document.getElementById("zealot").innerHTML = zealot;
+  document.getElementById("bw").innerHTML = bw;
+  document.getElementById("pyro").innerHTML = pyro;
+  document.getElementById("uc").innerHTML = uc;
+}
+
+function load() {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.merc != "undefined") merc = savegame.merc;
   if (typeof savegame.hunt != "undefined") hunt = savegame.hunt;
@@ -223,31 +250,36 @@ function load(){
   if (typeof savegame.pyro != "undefined") pyro = savegame.pyro;
   if (typeof savegame.uc != "undefined") uc = savegame.uc;
 
-  document.getElementById("merc").innerHTML = merc;
-  document.getElementById("hunt").innerHTML = hunt;
-  document.getElementById("fk").innerHTML = fk;
-  document.getElementById("rv").innerHTML = rv;
-  document.getElementById("ib").innerHTML = ib;
-  document.getElementById("slayer").innerHTML = slayer;
-  document.getElementById("ws").innerHTML = ws;
-  document.getElementById("hm").innerHTML = hm;
-  document.getElementById("shade").innerHTML = shade;
-  document.getElementById("whc").innerHTML = whc;
-  document.getElementById("bh").innerHTML = bh;
-  document.getElementById("zealot").innerHTML = zealot;
-  document.getElementById("bw").innerHTML = bw;
-  document.getElementById("pyro").innerHTML = pyro;
-  document.getElementById("uc").innerHTML = uc;
-}
+  refresh();
+};
 
-/*function delete(){
-  localStorage.removeItem("save")
-}*/
+function saveKill() {
+  merc = 0;
+  hunt = 0;
+  fk = 0;
+
+  rv = 0;
+  ib = 0;
+  slayer = 0;
+
+  ws = 0;
+  hm = 0;
+  shade = 0;
+
+  whc = 0;
+  bh = 0;
+  zealot = 0;
+
+  bw = 0;
+  pyro = 0;
+  uc = 0;
+  sum = 0;
+  operation = "add";
+  multi = 1;
+};
 
 window.onload = function() {
   load()
 };
 
-window.setInterval(function(){
-  save();
-}, 1000);
+window.setInterval(function(){ save(); }, 1000);

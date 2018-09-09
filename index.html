@@ -7,236 +7,83 @@
 	</head>
 
 	<body>
-		<h1>Mission Counts</h1>
-
+		<!-- <h1>100 Missions</h1> -->
 		<table class="heros">
 			<tr>
-			<td>
-			<button onClick="mercSub(1)">-</button>
-			</td>
-			<td>
-			<span>Merc</span>
-			</td>
-			<td>
-			<span id="merc">0</span>
-			</td>
-			<td>
-			<button onClick="mercAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="huntSub(1)">-</button>
-			</td>
-			<td>
-			<span>Hunt</span>
-			</td>
-			<td>
-			<span id="hunt">0</span>
-			</td>
-			<td>
-			<button onClick="huntAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="fkSub(1)">-</button>
-			</td>
-			<td>
-			<span>FK</span>
-			</td>
-			<td>
-			<span id="fk">0</span>
-			</td>
-			<td>
-			<button onClick="fkAdd(1)">+</button>
-			</td>
-
-			</tr>
-
-			<br><br>
-
-			<tr>
-			<td>
-			<button onClick="rvSub(1)">-</button>
-			</td>
-			<td>
-			<span>RV</span>
-			</td>
-			<td>
-			<span id="rv">0</span>
-			</td>
-			<td>
-			<button onClick="rvAdd(1)">+</button>
-			</td>
-			<td>
-			<button onClick="ibSub(1)">-</button>
-			</td>
-
-
-			<td>
-			<span>IB</span>
-			</td>
-			<td>
-			<span id="ib">0</span>
-			</td>
-			<td>
-			<button onClick="ibAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="slayerSub(1)">-</button>
-			</td>
-			<td>
-			<span>Slayer</span>
-			</td>
-			<td>
-			<span id="slayer">0</span>
-			</td>
-			<td>
-			<button onClick="slayerAdd(1)">+</button>
-			</td>
-
-			</tr>
-
-			<tr>
-			<td>
-			<button onClick="wsSub(1)">-</button>
-			</td>
-			<td>
-			<span>WS</span>
-			</td>
-			<td>
-			<span id="ws">0</span>
-			</td>
-			<td>
-			<button onClick="wsAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="hmSub(1)">-</button>
-			</td>
-			<td>
-			<span>HM</span>
-			</td>
-			<td>
-			<span id="hm">0</span>
-			</td>
-			<td>
-			<button onClick="hmAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="shadeSub(1)">-</button>
-			</td>
-			<td>
-			<span>Shade</span>
-			</td>
-			<td>
-			<span id="shade">0</span>
-			</td>
-			<td>
-			<button onClick="shadeAdd(1)">+</button>
-			</td>
-
-			</tr>
-
-			<br><br>
-
-			<tr>
-			<td>
-			<button onClick="whcSub(1)">-</button>
-			</td>
-			<td>
-			<span>WHC</span>
-			</td>
-			<td>
-			<span id="whc">0</span>
-			</td>
-			<td>
-			<button onClick="whcAdd(1)">+</button>
-			</td>
-			<td>
-			<button onClick="bhSub(1)">-</button>
-			</td>
-			<td>
-			<span>BH</span>
-			</td>
-			<td>
-			<span id="bh">0</span>
-			</td>
-			<td>
-			<button onClick="bhAdd(1)">+</button>
-			</td>
-			<td>
-			<button onClick="zealotSub(1)">-</button>
-			</td>
-			<td>
-			<span>Zealot</span>
-			</td>
-			<td>
-			<span id="zealot">0</span>
-			</td>
-			<td>
-			<button onClick="zealotAdd(1)">+</button>
-			</td>
-
+				<td>
+					<img src="merc.png" id="hero" draggable="false" onclick="ops('merc')"> <br>
+					<div id="merc" class="count">0</div>
+				</td>
+				<td>
+					<img src="hunt.png" id="hero" draggable="false" onclick="ops('hunt')"> <br>
+					<div id="hunt" class="count">0</div>
+				</td>
+				<td>
+					<img src="fk.png" id="hero" draggable="false" onclick="ops('fk')"> <br>
+					<div id="fk" class="count">0</div>
+				</td>
 			</tr>
 			<tr>
-			<td>
-			<button onClick="bwSub(1)">-</button>
-			</td>
-			<td>
-			<span>BW</span>
-			</td>
-			<td>
-			<span id="bw">0</span>
-			</td>
-			<td>
-			<button onClick="bwAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="pyroSub(1)">-</button>
-			</td>
-			<td>
-			<span>Pyro</span>
-			</td>
-			<td>
-			<span id="pyro">0</span>
-			</td>
-			<td>
-			<button onClick="pyroAdd(1)">+</button>
-			</td>
-
-
-			<td>
-			<button onClick="ucSub(1)">-</button>
-			</td>
-			<td>
-			<span>UC</span>
-			</td>
-			<td>
-			<span id="uc">0</span>
-			</td>
-			<td>
-			<button onClick="ucAdd(1)">+</button>
-			</td>
-
+				<td>
+					<img src="rv.png" id="hero" draggable="false" onclick="ops('rv')"> <br>
+					<div id="rv" class="count">0</div>
+				</td>
+				<td>
+					<img src="ib.png" id="hero" draggable="false" onclick="ops('ib')"> <br>
+					<div id="ib" class="count">0</div>
+				</td>
+				<td>
+					<img src="slayer.png" id="hero" draggable="false" onclick="ops('slayer')"> <br>
+					<div id="slayer" class="count">0</div>
+				</td>
 			</tr>
-			</table>
-
-			<br><br>
-			<!--
-			<button class="options" onClick="save()">Save</button>
-			<button class="options" onClick="load()">Load</button>
-			-->
-
-
+			<tr>
+				<td>
+					<img src="ws.png" id="hero" draggable="false" onclick="ops('ws')"> <br>
+					<div id="ws" class="count">0</div>
+				</td>
+				<td>
+					<img src="hm.png" id="hero" draggable="false" onclick="ops('hm')"> <br>
+					<div id="hm" class="count">0</div>
+				</td>
+				<td>
+					<img src="shade.png" id="hero" draggable="false" onclick="ops('shade')"> <br>
+					<div id="shade" class="count">0</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="whc.png" id="hero" draggable="false" onclick="ops('whc')"> <br>
+					<div id="whc" class="count">0</div>
+				</td>
+				<td>
+					<img src="bh.png" id="hero" draggable="false" onclick="ops('bh')"> <br>
+					<div id="bh" class="count">0</div>
+				</td>
+				<td>
+					<img src="zealot.png" id="hero" draggable="false" onclick="ops('zealot')"> <br>
+					<div id="zealot" class="count">0</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="bw.png" id="hero" draggable="false" onclick="ops('bw')"> <br>
+					<div id="bw" class="count">0</div>
+				</td>
+				<td>
+					<img src="pyro.png" id="hero" draggable="false" onclick="ops('pyro')"> <br>
+					<div id="pyro" class="count">0</div>
+				</td>
+				<td>
+					<img src="uc.png" id="hero" draggable="false" onclick="ops('uc')"> <br>
+					<div id="uc" class="count">0</div>
+				</td>
+			</tr>
+		</table>
+		<img src="add.png" id="add" draggable="false" onclick="changeOps('add')"> <br>
+		<img src="sub.png" id="sub" draggable="false" onclick="changeOps('sub')"> <br>
+		<img src="1.png" id="multi1" draggable="false" onclick="changeMulti(1)">
+		<img src="10.png" id="multi10" draggable="false" onclick="changeMulti(10)">
 
 		<script type="text/javascript" src="main.js"></script>
 	</body>
