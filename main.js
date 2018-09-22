@@ -29,151 +29,151 @@ function ops(name) {
   if (name == 'merc') {
     if (operation == "add") {
       merc = merc + multi;
-      document.getElementById("merc").innerHTML = merc;
+      refresh();
     };
     if (operation == "sub") {
       merc = merc - multi;
-      document.getElementById("merc").innerHTML = merc;
+      refresh();
     };
   };
   if (name == 'hunt') {
     if (operation == "add") {
       hunt = hunt + multi;
-      document.getElementById("hunt").innerHTML = hunt;
+      refresh();
     };
     if (operation == "sub") {
       hunt = hunt - multi;
-      document.getElementById("hunt").innerHTML = hunt;
+      refresh();
     };
   };
   if (name == 'fk') {
     if (operation == "add") {
       fk = fk + multi;
-      document.getElementById("fk").innerHTML = fk;
+      refresh();
     };
     if (operation == "sub") {
       fk = fk - multi;
-      document.getElementById("fk").innerHTML = fk;
+      refresh();
     };
   };
   if (name == 'rv') {
     if (operation == "add") {
       rv = rv + multi;
-      document.getElementById("rv").innerHTML = rv;
+      refresh();
     };
     if (operation == "sub") {
       rv = rv - multi;
-      document.getElementById("rv").innerHTML = rv;
+      refresh();
     };
   };
   if (name == 'ib') {
     if (operation == "add") {
       ib = ib + multi;
-      document.getElementById("ib").innerHTML = ib;
+      refresh();
     };
     if (operation == "sub") {
       ib = ib - multi;
-      document.getElementById("ib").innerHTML = ib;
+      refresh();
     };
   };
   if (name == 'slayer') {
     if (operation == "add") {
       slayer = slayer + multi;
-      document.getElementById("slayer").innerHTML = slayer;
+      refresh();
     };
     if (operation == "sub") {
       slayer = slayer - multi;
-      document.getElementById("slayer").innerHTML = slayer;
+      refresh();
     };
   };
   if (name == 'ws') {
     if (operation == "add") {
       ws = ws + multi;
-      document.getElementById("ws").innerHTML = ws;
+      refresh();
     };
     if (operation == "sub") {
       ws = ws - multi;
-      document.getElementById("ws").innerHTML = ws;
+      refresh();
     };
   };
   if (name == 'hm') {
     if (operation == "add") {
       hm = hm + multi;
-      document.getElementById("hm").innerHTML = hm;
+      refresh();
     };
     if (operation == "sub") {
       hm = hm - multi;
-      document.getElementById("hm").innerHTML = hm;
+      refresh();
     };
   };
   if (name == 'shade') {
     if (operation == "add") {
       shade = shade + multi;
-      document.getElementById("shade").innerHTML = shade;
+      refresh();
     };
     if (operation == "sub") {
       shade = shade - multi;
-      document.getElementById("shade").innerHTML = shade;
+      refresh();
     };
   };
   if (name == 'whc') {
     if (operation == "add") {
       whc = whc + multi;
-      document.getElementById("whc").innerHTML = whc;
+      refresh();
     };
     if (operation == "sub") {
       whc = whc - multi;
-      document.getElementById("whc").innerHTML = whc;
+      refresh();
     };
   };
   if (name == 'bh') {
     if (operation == "add") {
       bh = bh + multi;
-      document.getElementById("bh").innerHTML = bh;
+      refresh();
     };
     if (operation == "sub") {
       bh = bh - multi;
-      document.getElementById("bh").innerHTML = bh;
+      refresh();
     };
   };
   if (name == 'zealot') {
     if (operation == "add") {
       zealot = zealot + multi;
-      document.getElementById("zealot").innerHTML = zealot;
+      refresh();
     };
     if (operation == "sub") {
       zealot = zealot - multi;
-      document.getElementById("zealot").innerHTML = zealot;
+      refresh();
     };
   };
   if (name == 'bw') {
     if (operation == "add") {
       bw = bw + multi;
-      document.getElementById("bw").innerHTML = bw;
+      refresh();
     };
     if (operation == "sub") {
       bw = bw - multi;
-      document.getElementById("bw").innerHTML = bw;
+      refresh();
     };
   };
   if (name == 'pyro') {
     if (operation == "add") {
       pyro = pyro + multi;
-      document.getElementById("pyro").innerHTML = pyro;
+      refresh();
     };
     if (operation == "sub") {
       pyro = pyro - multi;
-      document.getElementById("pyro").innerHTML = pyro;
+      refresh();
     };
   };
   if (name == 'uc') {
       if (operation == "add") {
         uc = uc + multi;
-        document.getElementById("uc").innerHTML = uc;
+        refresh();
       };
       if (operation == "sub") {
         uc = uc - multi;
-        document.getElementById("uc").innerHTML = uc;
+        refresh();
       };
   }
 };
@@ -211,21 +211,45 @@ function save(){
 }
 
 function refresh(){
+  kruber = merc + hunt + fk;
+  kruberPer = Math.round((kruber/300)*100) + '%';
+  bardin = rv + ib + slayer;
+  bardinPer = Math.round((bardin/300)*100) + '%';
+  kerillian = ws + hm + shade;
+  kerillianPer = Math.round((kerillian/300)*100) + '%';
+  saltzpyre = whc + bh + zealot;
+  saltzpyrePer = Math.round((saltzpyre/300)*100) + '%';
+  sienna = bw + pyro + uc;
+  siennaPer = Math.round((sienna/300)*100) + '%';
+  totalCount = kruber + bardin + kerillian + saltzpyre + sienna;
+  totalCountPer = Math.round((totalCount/1500)*100) + '%';
   document.getElementById("merc").innerHTML = merc;
   document.getElementById("hunt").innerHTML = hunt;
   document.getElementById("fk").innerHTML = fk;
+  document.getElementById("kruber").innerHTML = kruber;
+  document.getElementById("kruberPer").innerHTML = kruberPer;
   document.getElementById("rv").innerHTML = rv;
   document.getElementById("ib").innerHTML = ib;
   document.getElementById("slayer").innerHTML = slayer;
+  document.getElementById("bardin").innerHTML = bardin;
+  document.getElementById("bardinPer").innerHTML = bardinPer;
   document.getElementById("ws").innerHTML = ws;
   document.getElementById("hm").innerHTML = hm;
   document.getElementById("shade").innerHTML = shade;
+  document.getElementById("kerillian").innerHTML = kerillian;
+  document.getElementById("kerillianPer").innerHTML = kerillianPer;
   document.getElementById("whc").innerHTML = whc;
   document.getElementById("bh").innerHTML = bh;
   document.getElementById("zealot").innerHTML = zealot;
+  document.getElementById("saltzpyre").innerHTML = saltzpyre;
+  document.getElementById("saltzpyrePer").innerHTML = saltzpyrePer;
   document.getElementById("bw").innerHTML = bw;
   document.getElementById("pyro").innerHTML = pyro;
   document.getElementById("uc").innerHTML = uc;
+  document.getElementById("sienna").innerHTML = sienna;
+  document.getElementById("siennaPer").innerHTML = siennaPer;
+  document.getElementById("totalCount").innerHTML = totalCount;
+  document.getElementById("totalCountPer").innerHTML = totalCountPer;
 }
 
 function load() {
@@ -279,7 +303,7 @@ function saveKill() {
 };
 
 window.onload = function() {
-  load()
+  load();
 };
 
 window.setInterval(function(){ save(); }, 1000);

@@ -1,9 +1,9 @@
 body {
   font-size: 110%;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 70px;
+  margin-left: 19px;
   background-color: lightblue;
-  display: table;
+  //display: table;
   overflow-y: hidden;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -21,9 +21,19 @@ table.heros {
   margin-top: 20px;
 }
 
+table.missionCount {
+  position:absolute;
+  left: 50px;
+  top: 335px;
+}
+
+div#slash {
+  text-align: center;
+}
+
 img#add {
   position: absolute;
-  left: 400px;
+  left: 410px;
   top: 335px;
   //margin-top: 100px;
   //margin-left: 400px;
@@ -33,7 +43,7 @@ img#add {
 
 img#sub {
   position: absolute;
-  left: 400px;
+  left: 410px;
   top: 420px;
   //margin-top: 100px;
   //margin-left: 400px;
@@ -49,7 +59,7 @@ img#hero {
 
 img#multi1 {
   position: absolute;
-  left: 400px;
+  left: 410px;
   top: 506px;
   width: 35px;
   height: auto;
@@ -57,7 +67,7 @@ img#multi1 {
 
 img#multi10 {
   position: absolute;
-  left: 443px;
+  left: 453px;
   top: 506px;
   width: 35px;
   height: auto;
