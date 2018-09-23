@@ -1,25 +1,37 @@
 var merc = 0;
 var hunt = 0;
 var fk = 0;
+var levelsKruber = 0;
+var levelsKruber2 = 0;
 
 var rv = 0;
 var ib = 0;
 var slayer = 0;
+var levelsBardin = 0;
+var levelsBardin2 = 0;
 
 var ws = 0;
 var hm = 0;
 var shade = 0;
+var levelsKerillian = 0;
+var levelsKerillian2 = 0;
 
 var whc = 0;
 var bh = 0;
 var zealot = 0;
+var levelsSaltzpyre = 0;
+var levelsSaltzpyre2 = 0;
 
 var bw = 0;
 var pyro = 0;
 var uc = 0;
+var levelsSienna = 0;
+var levelsSienna2 = 0;
+
 var sum = 0;
 var operation = "add";
 var multi = 1;
+var levelsTotal = 0;
 
 function changeMulti(multiplier) {
   multi = multiplier;
@@ -187,7 +199,88 @@ function changeOps(operator) {
   }
 }
 
+function levels(operation2,levelsChar) {
+  if (operation2 == 'add') {
+    if (levelsChar == 'kruber') {
+      levelsKruber = levelsKruber + multi;
+      prestige(levelsKruber);
+    }
+    if (levelsChar == 'bardin') {
+      levelsBardin = levelsBardin + multi;
+      prestige(levelsBardin);
+    }
+    if (levelsChar == 'kerillian') {
+      levelsKerillian = levelsKerillian + multi;
+      prestige(levelsKerillian);
+    }
+    if (levelsChar == 'saltzpyre') {
+      levelsSaltzpyre = levelsSaltzpyre + multi;
+      prestige(levelsSaltzpyre);
+    }
+    if (levelsChar == 'sienna') {
+      levelsSienna = levelsSienna + multi;
+      prestige(levelsSienna);
+    }
+    refresh();
+  }
+  if (operation2 == 'sub') {
+    if (levelsChar == 'kruber') {
+      levelsKruber = levelsKruber - multi;
+      prestige(levelsKruber);
+    }
+    if (levelsChar == 'bardin') {
+      levelsBardin = levelsBardin - multi;
+      prestige(levelsBardin);
+    }
+    if (levelsChar == 'kerillian') {
+      levelsKerillian = levelsKerillian - multi;
+      prestige(levelsKerillian);
+    }
+    if (levelsChar == 'saltzpyre') {
+      levelsSaltzpyre = levelsSaltzpyre - multi;
+      prestige(levelsSaltzpyre);
+    }
+    if (levelsChar == 'sienna') {
+      levelsSienna = levelsSienna - multi;
+      prestige(levelsSienna);
+    }
+    refresh();
+  }
+  refresh();
+}
 
+function prestige() {
+  if (levelsKruber >= 30) {
+    levelsKruber2 = '30 + ' + (levelsKruber-30);
+  }
+  if (levelsKruber < 30) {
+    levelsKruber2 = levelsKruber;
+  }
+  if (levelsBardin >= 30) {
+    levelsBardin2 = '30 + ' + (levelsBardin-30);
+  }
+  if (levelsBardin < 30) {
+    levelsBardin2 = levelsBardin;
+  }
+  if (levelsKerillian >= 30) {
+    levelsKerillian2 = '30 + ' + (levelsKerillian-30);
+  }
+  if (levelsKerillian < 30) {
+    levelsKerillian2 = levelsKerillian;
+  }
+  if (levelsSaltzpyre >= 30) {
+    levelsSaltzpyre2 = '30 + ' + (levelsSaltzpyre-30);
+  }
+  if (levelsSaltzpyre < 30) {
+    levelsSaltzpyre2 = levelsSaltzpyre;
+  }
+  if (levelsSienna >= 30) {
+    levelsSienna2 = '30 + ' + (levelsSienna-30);
+  }
+  if (levelsSienna < 30) {
+    levelsSienna2 = levelsSienna;
+  }
+}
 
 function save(){
   var save = {
@@ -206,6 +299,18 @@ function save(){
     bw: bw,
     pyro: pyro,
     uc: uc,
+
+    levelsKruber: levelsKruber,
+    levelsBardin: levelsBardin,
+    levelsKerillian: levelsKerillian,
+    levelsSaltzpyre: levelsSaltzpyre,
+    levelsSienna: levelsSienna,
+
+    levelsKruber2: levelsKruber2,
+    levelsBardin2: levelsBardin2,
+    levelsKerillian2: levelsKerillian2,
+    levelsSaltzpyre2: levelsSaltzpyre2,
+    levelsSienna2: levelsSienna2
   }
   localStorage.setItem("save",JSON.stringify(save));
 }
@@ -223,33 +328,40 @@ function refresh(){
   siennaPer = Math.round((sienna/300)*100) + '%';
   totalCount = kruber + bardin + kerillian + saltzpyre + sienna;
   totalCountPer = Math.round((totalCount/1500)*100) + '%';
+  levelsTotal2 = levelsKruber + levelsBardin + levelsKerillian + levelsSaltzpyre + levelsSienna;
   document.getElementById("merc").innerHTML = merc;
   document.getElementById("hunt").innerHTML = hunt;
   document.getElementById("fk").innerHTML = fk;
   document.getElementById("kruber").innerHTML = kruber;
   document.getElementById("kruberPer").innerHTML = kruberPer;
+  document.getElementById("levelsKruber2").innerHTML = levelsKruber2;
   document.getElementById("rv").innerHTML = rv;
   document.getElementById("ib").innerHTML = ib;
   document.getElementById("slayer").innerHTML = slayer;
   document.getElementById("bardin").innerHTML = bardin;
   document.getElementById("bardinPer").innerHTML = bardinPer;
+  document.getElementById("levelsBardin2").innerHTML = levelsBardin2;
   document.getElementById("ws").innerHTML = ws;
   document.getElementById("hm").innerHTML = hm;
   document.getElementById("shade").innerHTML = shade;
   document.getElementById("kerillian").innerHTML = kerillian;
   document.getElementById("kerillianPer").innerHTML = kerillianPer;
+  document.getElementById("levelsKerillian2").innerHTML = levelsKerillian2;
   document.getElementById("whc").innerHTML = whc;
   document.getElementById("bh").innerHTML = bh;
   document.getElementById("zealot").innerHTML = zealot;
   document.getElementById("saltzpyre").innerHTML = saltzpyre;
   document.getElementById("saltzpyrePer").innerHTML = saltzpyrePer;
+  document.getElementById("levelsSaltzpyre2").innerHTML = levelsSaltzpyre2;
   document.getElementById("bw").innerHTML = bw;
   document.getElementById("pyro").innerHTML = pyro;
   document.getElementById("uc").innerHTML = uc;
   document.getElementById("sienna").innerHTML = sienna;
   document.getElementById("siennaPer").innerHTML = siennaPer;
+  document.getElementById("levelsSienna2").innerHTML = levelsSienna2;
   document.getElementById("totalCount").innerHTML = totalCount;
   document.getElementById("totalCountPer").innerHTML = totalCountPer;
+  document.getElementById("levelsTotal2").innerHTML = levelsTotal2;
 }
 
 function load() {
@@ -274,7 +386,41 @@ function load() {
   if (typeof savegame.pyro != "undefined") pyro = savegame.pyro;
   if (typeof savegame.uc != "undefined") uc = savegame.uc;
 
+  if (typeof savegame.levelsKruber != "undefined") levelsKruber = savegame.levelsKruber;
+  if (typeof savegame.levelsBardin != "undefined") levelsBardin = savegame.levelsBardin;
+  if (typeof savegame.levelsKerillian != "undefined") levelsKerillian = savegame.levelsKerillian;
+  if (typeof savegame.levelsSaltzpyre != "undefined") levelsSaltzpyre = savegame.levelsSaltzpyre;
+  if (typeof savegame.levelsSienna != "undefined") levelsSienna = savegame.levelsSienna;
+
+  if (typeof savegame.levelsKruber2 != "undefined") levelsKruber2 = savegame.levelsKruber2;
+  if (typeof savegame.levelsBardin2 != "undefined") levelsBardin2 = savegame.levelsBardin2;
+  if (typeof savegame.levelsKerillian2 != "undefined") levelsKerillian2 = savegame.levelsKerillian2;
+  if (typeof savegame.levelsSaltzpyre2 != "undefined") levelsSaltzpyre2 = savegame.levelsSaltzpyre2;
+  if (typeof savegame.levelsSienna2 != "undefined") levelsSienna2 = savegame.levelsSienna2;
+
+  document.getElementById("100Missions").style.display = "block";
   refresh();
+};
+
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
 };
 
 function saveKill() {
