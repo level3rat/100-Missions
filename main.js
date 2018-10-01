@@ -213,7 +213,7 @@ function changeOps(operator) {
     document.getElementById("sub").style = "border: 3px solid #FFF; left: 407px;";
     document.getElementById("add").style = "border: 0px solid #FFF; left: 410px;";
   }
-}
+};
 
 function levels(operation2,levelsChar) {
   if (operation2 == 'add') {
