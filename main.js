@@ -35,7 +35,19 @@ var levelsTotal = 0;
 
 function changeMulti(multiplier) {
   multi = multiplier;
-}
+  if (multi == 1) {
+    document.getElementById("multi1").style = "border: 3px solid #FFF; left: 407px;";
+    document.getElementById("multi10").style = "border: 0px solid #FFF; left: 453px;";
+    document.getElementById("multi1-2").style = "border: 3px solid #FFF;";
+    document.getElementById("multi10-2").style = "border: 0px solid #FFF;";
+  };
+  if (multi == 10) {
+    document.getElementById("multi10").style = "border: 3px solid #FFF; left: 450px;";
+    document.getElementById("multi1").style = "border: 0px solid #FFF; left: 410px;";
+    document.getElementById("multi10-2").style = "border: 3px solid #FFF;";
+    document.getElementById("multi1-2").style = "border: 0px solid #FFF;";
+  };
+};
 
 function ops(name) {
   if (name == 'merc') {
@@ -193,9 +205,13 @@ function ops(name) {
 function changeOps(operator) {
   if (operator == 'add') {
     operation = 'add';
+    document.getElementById("add").style = "border: 3px solid #FFF; left: 407px;";
+    document.getElementById("sub").style = "border: 0px solid #FFF; left: 410px;";
   }
   if (operator == 'sub') {
     operation = 'sub';
+    document.getElementById("sub").style = "border: 3px solid #FFF; left: 407px;";
+    document.getElementById("add").style = "border: 0px solid #FFF; left: 410px;";
   }
 }
 

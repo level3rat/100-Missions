@@ -9,9 +9,9 @@
 	<body>
 		<!-- Tab links -->
 		<div class="tab">
-		  <button class="tablinks" onclick="openTab(event, '100Missions')">100 Missions</button>
+		  <button class="tablinks active" onclick="openTab(event, '100Missions')">100 Missions</button>
 		  <button class="tablinks" onclick="openTab(event, 'CharacterLevels')">Character Levels</button>
-		  <button class="tablinks" onclick="openTab(event, 'MapFrequency')">Map Frequency</button>
+		  <!--button class="tablinks" onclick="openTab(event, 'MapFrequency')">Map Frequency</button-->
 		  <!--button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button-->
 		</div>
 
@@ -121,7 +121,7 @@
 		  <table>
 				<tr>
 					<td>
-						Krueger
+						Kruber
 					</td>
 					<td>
 						<img src="img/sub.png" class="ops2" draggable="false" onclick="levels('sub','kruber')">
@@ -197,20 +197,18 @@
 						<div id="levelsTotal2">0</div>
 					</td>
 					<td>
-						<img src="img/1.png" class="ops" draggable="false" onclick="changeMulti(1)">
-						<img src="img/10.png" class="ops" draggable="false" onclick="changeMulti(10)">
+						<img src="img/1.png" id="multi1-2" class="ops" draggable="false" onclick="changeMulti(1)">
+						<img src="img/10.png" id="multi10-2" class="ops" draggable="false" onclick="changeMulti(10)">
 					</td>
 				</tr>
 			</table>
-
-			<p2>todo: make this size consistent with the other tab lol</p2>
 		</div>
 
-		<div id="MapFrequency" class="tabcontent">
+		<!--div id="MapFrequency" class="tabcontent">
 		  <h3>Map Frequency</h3>
 		  <p>youre gonna be able to click on map to add to its count :)))</p>
 			<p2>sometimes, in the name of progress, we forget to ask ourselves 'why?'</p2>
-		</div>
+		</div-->
 
 		<!--div id="Tokyo" class="tabcontent">
 		  <h3>Tokyo</h3>
