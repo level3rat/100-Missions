@@ -1,0 +1,35 @@
+body {
+  background-color: lightblue;
+}
+
+div.MissionsMain {
+  float: left;
+  width:400px;
+  background-color: #DDDDDD;
+}
+
+div.Missions {
+  float: left;
+  width:120px;
+  background-color: #AAAAAA;
+  margin: 0 auto;
+}
+
+div.Missions1 {
+  float: left;
+  width:400px;
+  background-color: #aaffaa;
+}
+
+div.Missions2 {
+  float: left;
+  padding: 58px 0px 58px 0px;
+  width:40px;
+  background-color: #ffAAAA;
+}
+
+div.count {
+  float:left;
+  width: 40px;
+  text-align: center;
+}

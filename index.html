@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<link href='https://fonts.googleapis.com/css?family=UnifrakturCook:700' rel='stylesheet'>
 		<title>100 Missions Challenge</title>
 
 	</head>
@@ -9,14 +10,20 @@
 	<body>
 		<!-- Tab links  -->
 		<div class="tab">
-		  <button class="tablinks active" onclick="openTab(event, '100Missions')">100 Missions</button>
-		  <button class="tablinks" onclick="openTab(event, 'CharacterLevels')">Character Levels</button>
-		  <!--button class="tablinks" onclick="openTab(event, 'MapFrequency')">Map Frequency</button-->
+		  <button class="tablinks active" onclick="openTab(event, '100Missions'); hideOperatorPanel('false')" >100 Missions</button>
+		  <button class="tablinks" onclick="openTab(event, 'CharacterLevels'); hideOperatorPanel('true')">Character Levels</button>
+		  <button class="tablinks" onclick="openTab(event, 'VaultDrops'); hideOperatorPanel('false')">Vault Drops</button>
 		  <!--button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button-->
 		</div>
 
+		<div id="operatorPanel">
+			<img src="img/add.png" id="add" class="ops" draggable="false" onclick="changeOps('add')"> <br>
+			<img src="img/sub.png" id="sub" class="ops" draggable="false" onclick="changeOps('sub')"> <br>
+			<img src="img/1.png" id="multi1" class="ops" draggable="false" onclick="changeMulti(1)">
+			<img src="img/10.png" id="multi10" class="ops" draggable="false" onclick="changeMulti(10)">
+		</div>
 		<!-- Tab content -->
-		<div id="100Missions" class="tabcontent">
+		<div id="100Missions" class="tabcontent active">
 			<h3>100 Missions</h3>
 			<table class="heros">
 				<tr>
@@ -110,10 +117,6 @@
 					</td>
 				</tr>
 			</table>
-			<img src="img/add.png" id="add" class="ops" draggable="false" onclick="changeOps('add')"> <br>
-			<img src="img/sub.png" id="sub" class="ops" draggable="false" onclick="changeOps('sub')"> <br>
-			<img src="img/1.png" id="multi1" class="ops" draggable="false" onclick="changeMulti(1)">
-			<img src="img/10.png" id="multi10" class="ops" draggable="false" onclick="changeMulti(10)">
 		</div>
 
 		<div id="CharacterLevels" class="tabcontent">
@@ -204,11 +207,74 @@
 			</table>
 		</div>
 
-		<!--div id="MapFrequency" class="tabcontent">
-		  <h3>Map Frequency</h3>
-		  <p>youre gonna be able to click on map to add to its count :)))</p>
-			<p2>sometimes, in the name of progress, we forget to ask ourselves 'why?'</p2>
-		</div-->
+		<div id="VaultDrops" class="tabcontent">
+		  <h3>Vault Drops</h3>
+		  <div style="//background:#ffffaa; background-image: url('img/vault/bg.jpg'); width: 720px; height: 560px;">
+				<div id="vaults" style="padding-top: 10px;">
+					<div class="vaults" id="peasant">
+						<img src="img/vault/peasant.jpg" draggable="false" onClick="vault('peasant','Vault')"></img>
+						<p class="vaultOpened" id="peasantVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('peasant','Red')"></img>
+						<p class="vaultReds" id="peasantRed">0</p>
+						<p class="peasantPercentReds" id="peasantPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('peasant','Deed')"></img>
+						<p class="vaultDeeds" id="peasantDeed">0</p>
+						<p class="peasantPercentDeeds" id="peasantPercentDeeds">0</p>
+					</div>
+					<div class="vaults" id="commoner">
+						<img src="img/vault/commoner.jpg" draggable="false" onClick="vault('commoner','Vault')"></img>
+						<p class="vaultOpened" id="commonerVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('commoner','Red')"></img>
+						<p class="vaultReds" id="commonerRed">0</p>
+						<p class="commonerPercentReds" id="commonerPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('commoner','Deed')"></img>
+						<p class="vaultDeeds" id="commonerDeed">0</p>
+						<p class="commonerPercentDeeds" id="commonerPercentDeeds">0</p>
+					</div>
+					<div class="vaults" id="merchant">
+						<img src="img/vault/merchant.jpg" draggable="false" onClick="vault('merchant','Vault')"></img>
+						<p class="vaultOpened" id="merchantVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('merchant','Red')"></img>
+						<p class="vaultReds" id="merchantRed">0</p>
+						<p class="merchantPercentReds" id="merchantPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('merchant','Deed')"></img>
+						<p class="vaultDeeds" id="merchantDeed">0</p>
+						<p class="merchantPercentDeeds" id="merchantPercentDeeds">0</p>
+					</div>
+					<div class="vaults" id="soldier">
+						<img src="img/vault/soldier.jpg" draggable="false" onClick="vault('soldier','Vault')"></img>
+						<p class="vaultOpened" id="soldierVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('soldier','Red')"></img>
+						<p class="vaultReds" id="soldierRed">0</p>
+						<p class="soldierPercentReds" id="soldierPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('soldier','Deed')"></img>
+						<p class="vaultDeeds" id="soldierDeed">0</p>
+						<p class="soldierPercentDeeds" id="soldierPercentDeeds">0</p>
+					</div>
+					<div class="vaults" id="general">
+						<img src="img/vault/general.jpg" draggable="false" onClick="vault('general','Vault')"></img>
+						<p class="vaultOpened" id="generalVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('general','Red')"></img>
+						<p class="vaultReds" id="generalRed">0</p>
+						<p class="generalPercentReds" id="generalPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('general','Deed')"></img>
+						<p class="vaultDeeds" id="generalDeed">0</p>
+						<p class="generalPercentDeeds" id="generalPercentDeeds">0</p>
+					</div>
+					<div class="vaults" id="emperor">
+						<img src="img/vault/emperor.jpg" draggable="false" onClick="vault('emperor','Vault')"></img>
+						<p class="vaultOpened" id="emperorVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('emperor','Red')"></img>
+						<p class="vaultReds" id="emperorRed">0</p>
+						<p class="emperorPercentReds" id="emperorPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('emperor','Deed')"></img>
+						<p class="vaultDeeds" id="emperorDeed">0</p>
+						<p class="emperorPercentDeeds" id="emperorPercentDeeds">0</p>
+					</div>
+				</div>
+				<p style="color:#FFFFFF; margin-left: 10px;">Trying something new here. Don't worry, I know I need to try something new again.</p>
+			</div>
+		</div>
 
 		<!--div id="Tokyo" class="tabcontent">
 		  <h3>Tokyo</h3>
