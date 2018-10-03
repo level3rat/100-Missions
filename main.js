@@ -279,18 +279,18 @@ function refresh(){
   totalCountPer = Math.round((totalCount/1500)*100) + '%';
   levelsTotal2 = levelsKruber + levelsBardin + levelsKerillian + levelsSaltzpyre + levelsSienna;
 
-  peasantPercentReds = Math.round((peasantRed / peasantVault*3)*100) + '%';
-  peasantPercentDeeds = Math.round((peasantDeed / peasantVault*3)*100) + '%';
-  commonerPercentReds = Math.round((commonerRed / commonerVault*3)*100) + '%';
-  commonerPercentDeeds = Math.round((commonerDeed / commonerVault*3)*100) + '%';
-  merchantPercentReds = Math.round((merchantRed / merchantVault*3)*100) + '%';
-  merchantPercentDeeds = Math.round((merchantDeed / merchantVault*3)*100) + '%';
-  soldierPercentReds = Math.round((soldierRed / soldierVault*3)*100) + '%';
-  soldierPercentDeeds = Math.round((soldierDeed / soldierVault*3)*100) + '%';
-  generalPercentReds = Math.round((generalRed / generalVault*3)*100) + '%';
-  generalPercentDeeds = Math.round((generalDeed / generalVault*3)*100) + '%';
-  emperorPercentReds = Math.round((emperorRed / emperorVault*3)*100) + '%';
-  emperorPercentDeeds = Math.round((emperorDeed / emperorVault*3)*100) + '%';
+  peasantPercentReds = Math.round((peasantRed / (peasantVault*3))*100) + '%';
+  peasantPercentDeeds = Math.round((peasantDeed / (peasantVault*3))*100) + '%';
+  commonerPercentReds = Math.round((commonerRed / (commonerVault*3))*100) + '%';
+  commonerPercentDeeds = Math.round((commonerDeed / (commonerVault*3))*100) + '%';
+  merchantPercentReds = Math.round((merchantRed / (merchantVault*3))*100) + '%';
+  merchantPercentDeeds = Math.round((merchantDeed / (merchantVault*3))*100) + '%';
+  soldierPercentReds = Math.round((soldierRed / (soldierVault*3))*100) + '%';
+  soldierPercentDeeds = Math.round((soldierDeed / (soldierVault*3))*100) + '%';
+  generalPercentReds = Math.round((generalRed / (generalVault*3))*100) + '%';
+  generalPercentDeeds = Math.round((generalDeed / (generalVault*3))*100) + '%';
+  emperorPercentReds = Math.round((emperorRed / (emperorVault*3))*100) + '%';
+  emperorPercentDeeds = Math.round((emperorDeed / (emperorVault*3))*100) + '%';
 
   document.getElementById("peasantVault").innerHTML = peasantVault;
   document.getElementById("peasantRed").innerHTML = peasantRed;
