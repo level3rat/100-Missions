@@ -261,6 +261,7 @@ function save(){
     emperorDeed:emperorDeed
   };
   localStorage.setItem("save",JSON.stringify(save));
+  //main.js failed to publish so im editing this so i can publish a "change"
 };
 
 function refresh(){
