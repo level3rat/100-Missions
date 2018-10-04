@@ -209,8 +209,27 @@
 
 		<div id="VaultDrops" class="tabcontent">
 		  <h3>Vault Drops</h3>
-		  <div style="//background:#ffffaa; background-image: url('img/vault/bg.jpg'); width: 720px; height: 560px;">
+			<div id="vaultNames">
+				<p6>Commendation</p6>
+				<p6>Peasant</p6>
+				<p6>Commoner</p6>
+				<p6>Merchant</p6>
+				<p6>Soldier</p6>
+				<p6>General</p6>
+				<p6>Emperor</p6>
+			</div>
+		  <div style="//background:#ffffaa; //background-image: url('img/vault/bg.jpg'); width: 840px; height: 560px; background-repeat: no-repeat;">
 				<div id="vaults" style="padding-top: 10px;">
+					<div class="vaults" id="commendation">
+						<img src="img/vault/peasant.jpg" draggable="false" onClick="vault('commendation','Vault')"></img>
+						<p class="vaultOpened" id="commendationVault">0</p>
+						<img src="img/vault/red.jpg" draggable="false" onClick="vault('commendation','Red')"></img>
+						<p class="vaultReds" id="commendationRed">0</p>
+						<p class="peasantPercentReds" id="commendationPercentReds">0</p>
+						<img src="img/vault/deed.jpg" draggable="false" onClick="vault('commendation','Hat')"></img>
+						<p class="vaultDeeds" id="commendationHat">0</p>
+						<p class="commendationPercentHats" id="commendationPercentHats">0</p>
+					</div>
 					<div class="vaults" id="peasant">
 						<img src="img/vault/peasant.jpg" draggable="false" onClick="vault('peasant','Vault')"></img>
 						<p class="vaultOpened" id="peasantVault">0</p>
@@ -272,7 +291,6 @@
 						<p class="emperorPercentDeeds" id="emperorPercentDeeds">0</p>
 					</div>
 				</div>
-				<p style="color:#FFFFFF; margin-left: 10px;">Trying something new here. Don't worry, I know I need to try something new again.</p>
 			</div>
 		</div>
 

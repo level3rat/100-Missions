@@ -34,6 +34,10 @@ var operation2 = 1;
 var multi = 1;
 var levelsTotal = 0;
 
+var commendationVault = 0;
+var commendationRed = 0;
+var commendationHat = 0;
+
 var peasantVault = 0;
 var peasantRed = 0;
 var peasantDeed = 0;
@@ -66,16 +70,16 @@ var type = '';
 function changeMulti(multiplier) {
   multi = multiplier;
   if (multi == 1) {
-    document.getElementById("multi1").style = "border: 3px solid #000000; left: 407px;";
-    document.getElementById("multi10").style = "border: 0px solid #000000; left: 453px;";
-    document.getElementById("multi1-2").style = "border: 3px solid #000000;";
-    document.getElementById("multi10-2").style = "border: 0px solid #000000;";
+    document.getElementById("multi1").style = "border: 3px solid #D3D3D3; left: 407px;";
+    document.getElementById("multi10").style = "border: 0px solid #D3D3D3; left: 453px;";
+    document.getElementById("multi1-2").style = "border: 3px solid #D3D3D3;";
+    document.getElementById("multi10-2").style = "border: 0px solid #D3D3D3;";
   };
   if (multi == 10) {
-    document.getElementById("multi10").style = "border: 3px solid #000000; left: 450px;";
-    document.getElementById("multi1").style = "border: 0px solid #000000; left: 410px;";
-    document.getElementById("multi10-2").style = "border: 3px solid #000000;";
-    document.getElementById("multi1-2").style = "border: 0px solid #000000;";
+    document.getElementById("multi10").style = "border: 3px solid #D3D3D3; left: 450px;";
+    document.getElementById("multi1").style = "border: 0px solid #D3D3D3; left: 410px;";
+    document.getElementById("multi10-2").style = "border: 3px solid #D3D3D3;";
+    document.getElementById("multi1-2").style = "border: 0px solid #D3D3D3;";
   };
 };
 
@@ -89,14 +93,14 @@ function changeOps(operator) {
   if (operator == 'add') {
     operation = 'add';
     operation2 = 1;
-    document.getElementById("add").style = "border: 3px solid #000000; left: 407px;";
-    document.getElementById("sub").style = "border: 0px solid #000000; left: 410px;";
+    document.getElementById("add").style = "border: 3px solid #D3D3D3; left: 407px;";
+    document.getElementById("sub").style = "border: 0px solid #D3D3D3; left: 410px;";
   }
   if (operator == 'sub') {
     operation = 'sub';
     operation2 = -1;
-    document.getElementById("sub").style = "border: 3px solid #000000; left: 407px;";
-    document.getElementById("add").style = "border: 0px solid #000000; left: 410px;";
+    document.getElementById("sub").style = "border: 3px solid #D3D3D3; left: 407px;";
+    document.getElementById("add").style = "border: 0px solid #D3D3D3; left: 410px;";
   }
 };
 
@@ -236,6 +240,10 @@ function save(){
     multi: multi,
     levelsTotal: levelsTotal,
 
+    commendationVault: commendationVault,
+    commendationRed: commendationRed,
+    commendationHat: commendationHat,
+
     peasantVault:peasantVault,
     peasantRed:peasantRed,
     peasantDeed:peasantDeed,
@@ -279,6 +287,8 @@ function refresh(){
   totalCountPer = Math.round((totalCount/1500)*100) + '%';
   levelsTotal2 = levelsKruber + levelsBardin + levelsKerillian + levelsSaltzpyre + levelsSienna;
 
+  commendationPercentReds = Math.round((commendationRed / (commendationVault*3))*100) + '%';
+  commendationPercentHats = Math.round((commendationHat / (commendationVault*3))*100) + '%';
   peasantPercentReds = Math.round((peasantRed / (peasantVault*3))*100) + '%';
   peasantPercentDeeds = Math.round((peasantDeed / (peasantVault*3))*100) + '%';
   commonerPercentReds = Math.round((commonerRed / (commonerVault*3))*100) + '%';
@@ -291,6 +301,12 @@ function refresh(){
   generalPercentDeeds = Math.round((generalDeed / (generalVault*3))*100) + '%';
   emperorPercentReds = Math.round((emperorRed / (emperorVault*3))*100) + '%';
   emperorPercentDeeds = Math.round((emperorDeed / (emperorVault*3))*100) + '%';
+
+  document.getElementById("commendationVault").innerHTML = commendationVault;
+  document.getElementById("commendationRed").innerHTML = commendationRed;
+  document.getElementById("commendationPercentReds").innerHTML = commendationPercentReds;
+  document.getElementById("commendationHat").innerHTML = commendationHat;
+  document.getElementById("commendationPercentHats").innerHTML = commendationPercentHats;
 
   document.getElementById("peasantVault").innerHTML = peasantVault;
   document.getElementById("peasantRed").innerHTML = peasantRed;
@@ -402,6 +418,10 @@ function load() {
   if (typeof savegame.multi != "undefined") multi = savegame.multi;
   if (typeof savegame.levelsTotal != "undefined") levelsTotal = savegame.levelsTotal;
 
+  if (typeof savegame.commendationVault != "undefined") commendationVault = savegame.commendationVault;
+  if (typeof savegame.commendationRed != "undefined") commendationRed = savegame.commendationRed;
+  if (typeof savegame.commendationHat != "undefined") commendationHat = savegame.commendationHat;
+
   if (typeof savegame.peasantVault != "undefined") peasantVault = savegame.peasantVault;
   if (typeof savegame.peasantRed != "undefined") peasantRed = savegame.peasantRed;
   if (typeof savegame.peasantDeed != "undefined") peasantDeed = savegame.peasantDeed;
@@ -455,7 +475,7 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 
     if (tabName == "VaultDrops") {
-      document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 770px; top: 300px;";
+      document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 894px; top: 300px;";
     }
     if (tabName == "100Missions") {
       document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 450px; top: 300px;";

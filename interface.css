@@ -11,7 +11,8 @@ body {
   margin-left: 19px;
   //color: #DEDED2;
   //background-color: #262626;
-  background-color: lightblue;
+  //background-color: lightblue;
+  background-color: #282C34;
   //display: table;
   overflow-y: hidden;
 }
@@ -54,10 +55,6 @@ img.ops2 {
 div.count {
   text-align: center;
   left: 900px;
-}
-
-p2 {
-  color: #4fbbc9;
 }
 
 /* Style the tab */
@@ -120,6 +117,7 @@ p.vaultOpened, p.vaultReds, p.vaultDeeds {
 
 body {
   font-family: 'UnifrakturCook';font-size: 20px;
+  color: #D3D3D3;
 }
 
 div#operatorPanel {
@@ -128,6 +126,18 @@ div#operatorPanel {
   position: relative;
   left: 450px;
   top: 300px;
+}
+
+div#vaultNames {
+  width: 850px;
+  margin: 0px auto;
+}
+
+p6 {
+  width: 80px;
+  margin: 0px 18px 0px 18px;
+  display: inline-block;
+  text-align: center;
 }
 
 img#multi1 {
