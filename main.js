@@ -38,6 +38,10 @@ var commendationVault = 0;
 var commendationRed = 0;
 var commendationHat = 0;
 
+var emperorChampVault = 0;
+var emperorChampRed = 0;
+var emperorChampDeed = 0;
+
 var peasantVault = 0;
 var peasantRed = 0;
 var peasantDeed = 0;
@@ -244,6 +248,10 @@ function save(){
     commendationRed: commendationRed,
     commendationHat: commendationHat,
 
+    emperorChampVault:emperorChampVault,
+    emperorChampRed:emperorChampRed,
+    emperorChampDeed:emperorChampDeed,
+
     peasantVault:peasantVault,
     peasantRed:peasantRed,
     peasantDeed:peasantDeed,
@@ -289,6 +297,8 @@ function refresh(){
 
   commendationPercentReds = Math.round((commendationRed / (commendationVault*3))*100) + '%';
   commendationPercentHats = Math.round((commendationHat / (commendationVault*3))*100) + '%';
+  emperorChampPercentReds = Math.round((emperorChampRed / (emperorChampVault*3))*100) + '%';
+  emperorChampPercentDeeds = Math.round((emperorChampDeed / (emperorChampVault*3))*100) + '%';
   peasantPercentReds = Math.round((peasantRed / (peasantVault*3))*100) + '%';
   peasantPercentDeeds = Math.round((peasantDeed / (peasantVault*3))*100) + '%';
   commonerPercentReds = Math.round((commonerRed / (commonerVault*3))*100) + '%';
@@ -307,6 +317,12 @@ function refresh(){
   document.getElementById("commendationPercentReds").innerHTML = commendationPercentReds;
   document.getElementById("commendationHat").innerHTML = commendationHat;
   document.getElementById("commendationPercentHats").innerHTML = commendationPercentHats;
+
+  document.getElementById("emperorChampVault").innerHTML = emperorChampVault;
+  document.getElementById("emperorChampRed").innerHTML = emperorChampRed;
+  document.getElementById("emperorChampPercentReds").innerHTML = emperorChampPercentReds;
+  document.getElementById("emperorChampDeed").innerHTML = emperorChampDeed;
+  document.getElementById("emperorChampPercentDeeds").innerHTML = emperorChampPercentDeeds;
 
   document.getElementById("peasantVault").innerHTML = peasantVault;
   document.getElementById("peasantRed").innerHTML = peasantRed;
@@ -422,6 +438,10 @@ function load() {
   if (typeof savegame.commendationRed != "undefined") commendationRed = savegame.commendationRed;
   if (typeof savegame.commendationHat != "undefined") commendationHat = savegame.commendationHat;
 
+  if (typeof savegame.emperorChampVault != "undefined") emperorChampVault = savegame.emperorChampVault;
+  if (typeof savegame.emperorChampRed != "undefined") emperorChampRed = savegame.emperorChampRed;
+  if (typeof savegame.emperorChampDeed != "undefined") emperorChampDeed = savegame.emperorChampDeed;
+
   if (typeof savegame.peasantVault != "undefined") peasantVault = savegame.peasantVault;
   if (typeof savegame.peasantRed != "undefined") peasantRed = savegame.peasantRed;
   if (typeof savegame.peasantDeed != "undefined") peasantDeed = savegame.peasantDeed;
@@ -475,7 +495,7 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 
     if (tabName == "VaultDrops") {
-      document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 894px; top: 300px;";
+      document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 1014px; top: 300px;";
     }
     if (tabName == "100Missions") {
       document.getElementById("operatorPanel").style = "float: left; width: 140px; position: relative; left: 450px; top: 300px;";
