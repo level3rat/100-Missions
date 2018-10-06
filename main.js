@@ -463,7 +463,7 @@ function load() {
   if (typeof savegame.generalDeed != "undefined") generalDeed = savegame.generalDeed;
 
   if (typeof savegame.emperorVault != "undefined") emperorVault = savegame.emperorVault;
-  if (typeof savegame.emperorRed != "undefined") savegame = savegame.emperorRed;
+  if (typeof savegame.emperorRed != "undefined") emperorRed = savegame.emperorRed;
   if (typeof savegame.emperorDeed != "undefined") emperorDeed = savegame.emperorDeed;
 
   document.getElementById("100Missions").style.display = "block";
