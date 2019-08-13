@@ -159,34 +159,34 @@ function levels(operation2,levelsChar) {
 }
 
 function prestige() {
-  if (levelsKruber >= 30) {
-    levelsKruber2 = '30 + ' + (levelsKruber-30);
+  if (levelsKruber >= 35) {
+    levelsKruber2 = '35 + ' + (levelsKruber-35);
   }
-  if (levelsKruber < 30) {
+  if (levelsKruber < 35) {
     levelsKruber2 = levelsKruber;
   }
-  if (levelsBardin >= 30) {
-    levelsBardin2 = '30 + ' + (levelsBardin-30);
+  if (levelsBardin >= 35) {
+    levelsBardin2 = '35 + ' + (levelsBardin-35);
   }
-  if (levelsBardin < 30) {
+  if (levelsBardin < 35) {
     levelsBardin2 = levelsBardin;
   }
-  if (levelsKerillian >= 30) {
-    levelsKerillian2 = '30 + ' + (levelsKerillian-30);
+  if (levelsKerillian >= 35) {
+    levelsKerillian2 = '35 + ' + (levelsKerillian-35);
   }
-  if (levelsKerillian < 30) {
+  if (levelsKerillian < 35) {
     levelsKerillian2 = levelsKerillian;
   }
-  if (levelsSaltzpyre >= 30) {
-    levelsSaltzpyre2 = '30 + ' + (levelsSaltzpyre-30);
+  if (levelsSaltzpyre >= 35) {
+    levelsSaltzpyre2 = '35 + ' + (levelsSaltzpyre-35);
   }
-  if (levelsSaltzpyre < 30) {
+  if (levelsSaltzpyre < 35) {
     levelsSaltzpyre2 = levelsSaltzpyre;
   }
-  if (levelsSienna >= 30) {
-    levelsSienna2 = '30 + ' + (levelsSienna-30);
+  if (levelsSienna >= 35) {
+    levelsSienna2 = '35 + ' + (levelsSienna-35);
   }
-  if (levelsSienna < 30) {
+  if (levelsSienna < 35) {
     levelsSienna2 = levelsSienna;
   }
 }
